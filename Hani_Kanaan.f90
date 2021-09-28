@@ -80,7 +80,7 @@ program assignment3
 
     !Print final chart
     print *, "copy & paste the chart (provided between the dash lines.)"
-    print *, "--------------------------------------------------------------------"
+    print *, "----------------------------------------------------------------"
     print *, title
     print *, "Original Price Tag Before Tax", "    Discounted Price After Tax"
     print *, CAD, "                              ", CAD, "               ", USD
@@ -88,10 +88,10 @@ program assignment3
     do while (curr <= max)
         priceAfterDiscount = curr * (1 - discount / 100)
         priceAfterTax = priceAfterDiscount * 1.13
-        priceAfterConversion = priceAfterTax/ exchange_rate
+        priceAfterConversion = priceAfterTax * exchange_rate
         print *, curr, "               ", priceAfterTax , priceAfterConversion
         curr = curr + 0.50
     end do
-    print *, "--------------------------------------------------------------------"
+    print *, "----------------------------------------------------------------"
 
 end program assignment3
