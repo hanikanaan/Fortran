@@ -34,7 +34,4 @@ program question3
                 print *, "Dear ", name, "your exam will be held in Hall-C"
         end select
     end if
-
-
-
 end program question3
