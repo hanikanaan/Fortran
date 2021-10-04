@@ -9,6 +9,4 @@ program question1
         y = ((x(i)**3.2 - 1) ** (4 * cos(x(i)))) / (log(x(i) - 1) - a)
         print *, "For  x=", x(i), "y is equal to: ", y
     end do
-
-
 end program question1
