@@ -26,7 +26,7 @@ program week5
     end do
 
     temp = diff / inc
-    length = ceiling(temp)
+    length = ceiling(temp) + 1
 
     curr = start
     print *, '  Centigrade       ', 'Fahrenheit       ', 'Kelvin'
@@ -40,10 +40,12 @@ program week5
         count = count + 1
         curr = curr + inc
         if (curr > finish) then
-            resu(1, count) = finish
-            resu(2, count) = finish * 1.8 + 32
-            resu(3, count) = finish + 273.15
+            curr = finish
+            resu(1, count) = curr
+            resu(2, count) = curr * 1.8 + 32
+            resu(3, count) = curr + 273.15
             print *, resu(1, count), resu(2, count), resu(3, count)
+            exit
         end if
     end do
 
